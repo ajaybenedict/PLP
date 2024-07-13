@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
 
 const initialState = {
   userInfo: [],
@@ -21,8 +20,6 @@ export const orebiSlice = createSlice({
       } else {
         state.products.push(action.payload);
       }
-      // Dispatch a success toast
-      toast.success("Product added to cart");
     },
     increaseQuantity: (state, action) => {
       const item = state.products.find(
